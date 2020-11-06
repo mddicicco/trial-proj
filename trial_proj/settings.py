@@ -99,6 +99,7 @@ else:
     LDAP_PORT = 636
 
 if os.getenv("TRAVIS") == "true":
+    DB_HOST = "localhost"
     DB_PORT = 3306
     DB_USER = "travis"
     DB_PWD = ""

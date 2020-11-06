@@ -98,7 +98,7 @@ else:
     SSL = True
     LDAP_PORT = 636
 
-if os.getenv("TRIAL_IS_TRAVIS") == "True":
+if os.getenv("TRAVIS") == "true":
     DB_PORT = 3306
     DB_USER = "travis"
     DB_PWD = ""

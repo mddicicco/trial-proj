@@ -1,7 +1,7 @@
 language: python
 python: "3.8"
-services:
-  - mysql
+before_install:
+  - chmod +x build.sh && ./build.sh
 install:
   - pip install -r requirements.txt
 script:

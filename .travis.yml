@@ -1,10 +1,13 @@
 language: python
-python: "3.8"
+python: '3.8'
 before_install:
-  - chmod +x build.sh && ./build.sh
+- chmod +x build.sh && ./build.sh
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 script:
-  - coverage run --source='.' manage.py test
+- coverage run --source='.' manage.py test
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
+env:
+  global:
+    secure: WBeJCmyKwKQCa8xexJ2ZPsHL9TqfmgvZ4GgheE1tsBJpgu5fRgDG4kJibGN7oHGwkca7LOg+w2MAnCG1NgQaokE1iBMZJdRRd46ayEGdmoA5VNEfMYklHgEa4W5WnefaBTQ69AyV7G/3pUWqBLmewsyhWVp2H2Wm0tMJdYUa4JQsJBpMIKGKHXd/tBZlYatYgl2nOeYZOm2v1wy19Ct7uVa071Ep4LRXaBU8+2ysfeh7yujUiMCw+CoM+6OJ66j/dSqOgiOZFQF+N0d9yI0ooWs805rasopKFIE1xfC4R3UwzUJoeLtped7b2/VdmlXC0CVke9pl6smcWqMJITQghRnYpv9rdvN97JUZ/SojLfgm3MZ6dU8foTf6ErKYYTO/WAfjVH+WS7HD/3ckUoZSrWrHZ4QnVHblJty+3YAc+PZv/+esAqoo3PW0Sup/T9bLp/oasBEn67DPYm1sN4/Qse8TPthIfLv3GbK8hpkpTu1MUbNp1SdDpGlKr/YS9jFXfuqGNp+C5Mwm4Bme+1Hrh++6M8R6e0Dypzg7V0w11Lo0etbnsulUwNlzoFzaIAepDqfjDhxfVAdOy3Q6ymC6ID6zK+QQhPb0HOAVxqq38UVd+NKlzxHSWabTNTuw76tNsAIBOca7AndNFwnyDaGjXApD6o7wDAeaz6qMAvp3Oac=

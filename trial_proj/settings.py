@@ -85,14 +85,14 @@ DB_PWD = os.getenv("TRIAL_PWD")
 DB_NAME = os.getenv("TRIAL_SCHEMA")
 if os.getenv("TRIAL_IS_LOCAL") == "True":
     DB_HOST = "127.0.0.1"
-    DB_PORT = "6500"
+    DB_PORT = 6500
     LDAP_IP1 = "10.200.160.27"
     LDAP_IP2 = "10.200.160.8"
     SSL = False
     LDAP_PORT = 389
 else:
     DB_HOST = "saitama.cluster-c0u7eogrlc5a.us-east-2.rds.amazonaws.com"
-    DB_PORT = "3306"
+    DB_PORT = 3306
     LDAP_IP1 = "208.90.105.6"
     LDAP_IP2 = "208.90.105.9"
     SSL = True
